@@ -49,7 +49,7 @@ The widget calculates progress from the milestone start and end dates.
 | Name | Default |
 | --- | --- |
 | `NOTION_MILESTONE_TITLE_PROPERTY` | `Name` |
-| `NOTION_MILESTONE_PROJECT_PROPERTY` | ` 🏰 Project,Projects,Portfolio` |
+| `NOTION_MILESTONE_PROJECT_PROPERTY` | `Project,Projects,Portfolio` |
 | `NOTION_MILESTONE_DATE_PROPERTY` | `Dates` |
 | `NOTION_MILESTONE_START_PROPERTY` | `Start` |
 | `NOTION_MILESTONE_END_PROPERTY` | `End` |
