@@ -1,0 +1,65 @@
+{
+  "updatedAt": "2026-04-28T15:30:00.000Z",
+  "milestones": [
+    {
+      "id": "demo-1",
+      "name": "Website Redesign",
+      "project": "Marketing",
+      "icon": {
+        "type": "emoji",
+        "value": "📣"
+      },
+      "start": "2026-03-01",
+      "end": "2026-06-24",
+      "timelineProgress": 51
+    },
+    {
+      "id": "demo-2",
+      "name": "Mobile App",
+      "project": "Product",
+      "icon": {
+        "type": "emoji",
+        "value": "📱"
+      },
+      "start": "2026-02-15",
+      "end": "2026-08-15",
+      "timelineProgress": 40
+    },
+    {
+      "id": "demo-3",
+      "name": "Analytics Dashboard",
+      "project": "Data",
+      "icon": {
+        "type": "emoji",
+        "value": "📊"
+      },
+      "start": "2026-04-01",
+      "end": "2026-07-30",
+      "timelineProgress": 23
+    },
+    {
+      "id": "demo-4",
+      "name": "E-commerce Platform",
+      "project": "Engineering",
+      "icon": {
+        "type": "emoji",
+        "value": "🧱"
+      },
+      "start": "2026-04-10",
+      "end": "2026-09-12",
+      "timelineProgress": 12
+    },
+    {
+      "id": "demo-5",
+      "name": "Internal Tool",
+      "project": "Operations",
+      "icon": {
+        "type": "emoji",
+        "value": "⚙️"
+      },
+      "start": "2026-03-16",
+      "end": "2026-06-05",
+      "timelineProgress": 53
+    }
+  ]
+}

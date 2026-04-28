@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Milestones Widget</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="widget" aria-live="polite">
+      <section class="table-shell">
+        <section class="milestones" id="milestones"></section>
+      </section>
+
+      <section class="state" id="emptyState" hidden>
+        <h2>No milestones yet</h2>
+        <p>Once GitHub Actions fetches Notion data, your milestones will appear here.</p>
+      </section>
+
+      <section class="state error" id="errorState" hidden>
+        <h2>Could not load data</h2>
+        <p>Check that <code>data/milestones.json</code> exists and GitHub Pages is publishing this folder.</p>
+      </section>
+
+      <p class="updated" id="updatedAt">Loading</p>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

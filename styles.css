@@ -1,0 +1,298 @@
+:root {
+  color-scheme: dark;
+  --bg: #202020;
+  --panel: #202020;
+  --panel-soft: #242424;
+  --line: #383838;
+  --line-soft: #303030;
+  --text: #f4f4f3;
+  --muted: #a9adb2;
+  --track: #303438;
+  --fill: #f7f7f5;
+  --danger: #ff9d9d;
+  font-family:
+    "Product Sans", "Google Sans", "Avenir Next", Avenir, "Helvetica Neue",
+    Arial, sans-serif;
+  letter-spacing: 0.006em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 300px;
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% -30%, rgba(255, 255, 255, 0.08), transparent 34%),
+    var(--bg);
+}
+
+.widget {
+  width: min(100%, 1120px);
+  min-height: 100vh;
+  padding: 14px;
+}
+
+.table-shell {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0)),
+    var(--panel);
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.34);
+}
+
+.milestone-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.45fr) minmax(100px, 1fr) minmax(94px, 0.55fr);
+  align-items: center;
+}
+
+.milestone-row {
+  min-height: 74px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.milestone-row:last-child {
+  border-bottom: 0;
+}
+
+.project-cell,
+.date-cell {
+  display: flex;
+  align-items: center;
+}
+
+.project-cell {
+  min-width: 0;
+  gap: 22px;
+}
+
+.page-icon,
+.date-cell svg {
+  flex: 0 0 auto;
+}
+
+.fallback-icon,
+.date-cell svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.fallback-icon {
+  color: var(--text);
+  stroke-width: 1.75;
+}
+
+.emoji-icon {
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.image-icon {
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-copy {
+  min-width: 0;
+}
+
+.project-copy h2,
+.project-copy p,
+.progress-cell p,
+.date-cell p,
+.updated,
+.state h2,
+.state p {
+  margin: 0;
+}
+
+.project-copy h2 {
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-copy p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progress-cell {
+  min-width: 0;
+  padding-right: 34px;
+}
+
+.progress-track {
+  position: relative;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--track);
+}
+
+.progress-track::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  content: "";
+}
+
+.progress-track > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--value);
+  border-radius: inherit;
+  background: var(--fill);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.22);
+}
+
+.progress-cell p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date-cell {
+  gap: 12px;
+  color: var(--text);
+}
+
+.date-cell svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 2;
+}
+
+.date-cell p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.updated {
+  padding: 10px 2px 0;
+  color: #737980;
+  font-size: 11px;
+  text-align: right;
+}
+
+.state {
+  margin-top: 12px;
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.state h2 {
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.state p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.error h2 {
+  color: var(--danger);
+}
+
+@media (max-width: 760px) {
+  .widget {
+    padding: 12px;
+  }
+
+  .milestone-row {
+    grid-template-columns: minmax(128px, 1.35fr) minmax(86px, 0.95fr) minmax(82px, 0.58fr);
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .milestone-row {
+    min-height: 64px;
+  }
+
+  .project-cell {
+    gap: 10px;
+  }
+
+  .page-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .emoji-icon {
+    font-size: 18px;
+  }
+
+  .project-copy h2 {
+    font-size: 13px;
+  }
+
+  .project-copy p {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+  .progress-cell {
+    padding-right: 14px;
+  }
+
+  .progress-track {
+    height: 8px;
+  }
+
+  .progress-cell p {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+
+  .date-cell {
+    gap: 7px;
+  }
+
+  .date-cell svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .date-cell p {
+    font-size: 11px;
+  }
+}
