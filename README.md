@@ -19,7 +19,7 @@ The private Notion API token is only used inside GitHub Actions. The widget page
 | Purpose | Default property name | Supported property type |
 | --- | --- | --- |
 | Milestone title | `Name` | Title |
-| Project subtitle/icon | `Project` | Relation preferred; Select, Status, Text, Formula, or Rollup also supported for text |
+| Project subtitle/icon | `Project`, `Projects`, or `Portfolio` | Relation preferred; Select, Status, Text, Formula, or Rollup also supported for text |
 | Date range | `Dates` | Date range |
 | Start date fallback | `Start` | Date or formula returning date |
 | End date fallback | `End` | Date or formula returning date |
@@ -49,7 +49,7 @@ The widget calculates progress from the milestone start and end dates.
 | Name | Default |
 | --- | --- |
 | `NOTION_MILESTONE_TITLE_PROPERTY` | `Name` |
-| `NOTION_MILESTONE_PROJECT_PROPERTY` | `Project` |
+| `NOTION_MILESTONE_PROJECT_PROPERTY` | `Project,Projects,Portfolio` |
 | `NOTION_MILESTONE_DATE_PROPERTY` | `Dates` |
 | `NOTION_MILESTONE_START_PROPERTY` | `Start` |
 | `NOTION_MILESTONE_END_PROPERTY` | `End` |
@@ -68,3 +68,4 @@ The widget can be previewed locally by opening `index.html` or serving this fold
 - Timeline progress is calculated as today between start date and end date, clamped from `0%` to `100%`.
 - The small label below each progress bar shows days left until the end date, or overdue status when the date has passed.
 - The icon on the left uses the related Project page icon from Notion when `Project` is a relation. Emoji and external image icons are stable; Notion file icons are refreshed by the scheduled workflow.
+- If your relation has a different name, set `NOTION_MILESTONE_PROJECT_PROPERTY` to the exact property name. You can also provide a comma-separated list of names to try.
