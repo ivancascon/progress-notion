@@ -5,7 +5,7 @@ A small GitHub Pages widget for Notion. It shows each Milestone with:
 - progress through the milestone timeline
 - days left until the deadline
 - project subtitle
-- each Milestone page icon
+- each related Project page icon
 
 The private Notion API token is only used inside GitHub Actions. The widget page reads `data/milestones.json`, which contains only the public values needed for display.
 
@@ -19,7 +19,7 @@ The private Notion API token is only used inside GitHub Actions. The widget page
 | Purpose | Default property name | Supported property type |
 | --- | --- | --- |
 | Milestone title | `Name` | Title |
-| Project subtitle | `Project` | Select, Status, Text, Formula, or Rollup |
+| Project subtitle/icon | `Project` | Relation preferred; Select, Status, Text, Formula, or Rollup also supported for text |
 | Date range | `Dates` | Date range |
 | Start date fallback | `Start` | Date or formula returning date |
 | End date fallback | `End` | Date or formula returning date |
@@ -67,4 +67,4 @@ The widget can be previewed locally by opening `index.html` or serving this fold
 - The workflow refreshes every 6 hours and can also be run manually.
 - Timeline progress is calculated as today between start date and end date, clamped from `0%` to `100%`.
 - The small label below each progress bar shows days left until the end date, or overdue status when the date has passed.
-- The icon on the left uses the Milestone page icon from Notion. Emoji and external image icons are stable; Notion file icons are refreshed by the scheduled workflow.
+- The icon on the left uses the related Project page icon from Notion when `Project` is a relation. Emoji and external image icons are stable; Notion file icons are refreshed by the scheduled workflow.
