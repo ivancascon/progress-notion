@@ -1,10 +1,10 @@
 :root {
   color-scheme: dark;
-  --bg: #202020;
-  --panel: #202020;
+  --bg: #191919;
+  --panel: #1f1f1f;
   --panel-soft: #242424;
-  --line: #383838;
-  --line-soft: #303030;
+  --line: #373737;
+  --line-soft: #2d2d2d;
   --text: #f4f4f3;
   --muted: #a9adb2;
   --track: #303438;
